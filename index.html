@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A3 Hype Store - Catálogo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #111;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .categoria {
+      margin-bottom: 3rem;
+    }
+
+    .categoria h2 {
+      font-size: 1.5rem;
+      border-left: 5px solid #000;
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00e676;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">A3 Hype Store</div>
+    <nav>
+      <ul>
+        <li><a href="#anime">Anime</a></li>
+        <li><a href="#frases">Frases</a></li>
+        <li><a href="#parejas">Parejas</a></li>
+        <li><a href="#nuevos">Nuevos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="categoria" id="Amiri">
+      <h2>Diseños de Anime</h2>
+      <div class="galeria">
+        <img src="C:/Users/dany5/OneDrive/Escritorio/A3Hype-Catalogo1/mockups/Amiri/AMIRI-17.png" alt="Mockup Amiri" />
+      </div>
+    </section>
+
+    <section class="categoria" id="frases">
+      <h2>Diseños con Frases</h2>
+      <div class="galeria">
+        <!-- Aquí agregas tus mockups de frases -->
+      </div>
+    </section>
+
+    <section class="categoria" id="parejas">
+      <h2>Diseños para Parejas</h2>
+      <div class="galeria">
+        <!-- Aquí agregas tus mockups de parejas -->
+      </div>
+    </section>
+
+    <section class="categoria" id="nuevos">
+      <h2>¡Nuevos Diseños!</h2>
+      <div class="galeria">
+        <!-- Aquí agregas tus últimos mockups -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contáctanos: <a href="https://wa.me/521XXXXXXXXXX" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/a3hypestore" target="_blank">Instagram</a></p>
+    <p>&copy; 2025 A3 Hype Store. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
