@@ -75,6 +75,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease-in-out;
+      cursor: pointer;
     }
 
     .galeria img:hover {
@@ -96,6 +97,42 @@
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    /* Estilos para el lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .lightbox-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -122,7 +159,7 @@
         <img src="mockups/Amiri/AMIRI-20.png" alt="Mockup Amiri" />
         <img src="mockups/Amiri/AMIRI-21.png" alt="Mockup Amiri" />
         <img src="mockups/Amiri/AMIRI-22.png" alt="Mockup Amiri" />
-        <img src="mockups/Amiri/Mockup_23" alt="Mockup Amiri" />
+        <img src="mockups/Amiri/Mockup_23.png" alt="Mockup Amiri" />
       </div>
     </section>
 
@@ -152,5 +189,40 @@
     <p>Contáctanos: <a href="https://wa.me/521XXXXXXXXXX" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/a3hypestore" target="_blank">Instagram</a></p>
     <p>&copy; 2025 A3 Hype Store. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span id="close" class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Imagen ampliada" />
+    </div>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.galeria img'); // Selecciona todas las imágenes
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const close = document.getElementById('close');
+
+    // Al hacer clic en una imagen, mostrarla en el lightbox
+    images.forEach(image => {
+      image.addEventListener('click', function() {
+        lightbox.style.display = 'flex'; // Muestra el lightbox
+        lightboxImg.src = this.src; // Establece la imagen grande
+      });
+    });
+
+    // Cerrar el lightbox cuando se hace clic en el botón de cerrar
+    close.addEventListener('click', function() {
+      lightbox.style.display = 'none'; // Ocultar el lightbox
+    });
+
+    // Cerrar el lightbox si se hace clic fuera de la imagen
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none'; // Ocultar el lightbox si se hace clic fuera de la imagen
+      }
+    });
+  </script>
 </body>
 </html>
