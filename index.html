@@ -60,15 +60,16 @@
       border-left: 5px solid #000;
       padding-left: 0.5rem;
       margin-bottom: 1rem;
+      cursor: pointer;
     }
 
     .galeria {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      justify-content: flex-start; /* <-- Esto alinea a la izquierda */
+      justify-content: flex-start;
     }
-    
+
     .galeria img {
       width: auto;
       height: auto;
@@ -76,7 +77,6 @@
       max-width: 100%;
       object-fit: contain;
     }
-
 
     .galeria img:hover {
       transform: scale(1.03);
@@ -99,7 +99,6 @@
       text-decoration: underline;
     }
 
-    /* Estilos para el lightbox */
     .lightbox {
       display: none;
       position: fixed;
@@ -134,6 +133,10 @@
       font-size: 2rem;
       cursor: pointer;
     }
+
+    .oculto {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -151,7 +154,7 @@
 
   <main>
     <section class="categoria" id="Amiri">
-      <h2>Diseños Amiri</h2>
+      <h2 class="toggle-titulo">Diseños Amiri</h2>
       <div class="galeria">
         <img src="mockups/Amiri/AMIRI-17.png" alt="Mockup Amiri" />
         <img src="mockups/Amiri/AMIRI-18.png" alt="Mockup Amiri" />
@@ -163,110 +166,116 @@
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños Anime</h2>
+    <!-- Puedes seguir este mismo formato para todas tus secciones -->
+    <section class="categoria" id="anime">
+      <h2 class="toggle-titulo">Diseños Anime</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
 
-    <section class="categoria" id="parejas">
-      <h2>Diseños Calacas Chidas</h2>
+    <section class="categoria" id="calacas">
+      <h2 class="toggle-titulo">Diseños Calacas Chidas</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de parejas -->
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños Autos</h2>
+    <section class="categoria" id="autos">
+      <h2 class="toggle-titulo">Diseños Autos</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños Deportes</h2>
+    <section class="categoria" id="deportes">
+      <h2 class="toggle-titulo">Diseños Deportes</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños DC</h2>
+    <section class="categoria" id="dc">
+      <h2 class="toggle-titulo">Diseños DC</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños Gym</h2>
+    <section class="categoria" id="gym">
+      <h2 class="toggle-titulo">Diseños Gym</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
 
-    <section class="categoria" id="frases">
-      <h2>Diseños Infantiles</h2>
+    <section class="categoria" id="infantiles">
+      <h2 class="toggle-titulo">Diseños Infantiles</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
-    <section class="categoria" id="frases">
-      <h2>Diseños Labubus</h2>
+    <section class="categoria" id="labubus">
+      <h2 class="toggle-titulo">Diseños Labubus</h2>
       <div class="galeria">
         <!-- Aquí agregas tus mockups de frases -->
       </div>
     </section>
     
-      <section class="categoria" id="frases">
-        <h2>Diseños Metal & Rock</h2>
+      <section class="categoria" id="metal">
+        <h2 class="toggle-titulo">Diseños Metal & Rock</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
 
-    <section class="categoria" id="frases">
-        <h2>Diseños Motos</h2>
+    <section class="categoria" id="motos">
+        <h2 class="toggle-titulo">Diseños Motos</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
     
-    <section class="categoria" id="frases">
-        <h2>Diseños Parejas</h2>
+    <section class="categoria" id="parejas">
+        <h2 class="toggle-titulo">Diseños Parejas</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
 
-    <section class="categoria" id="frases">
-        <h2>Diseños Pokemón</h2>
+    <section class="categoria" id="pokemon">
+        <h2 class="toggle-titulo">Diseños Pokemón</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
 
-    <section class="categoria" id="frases">
-        <h2>Diseños Retro</h2>
+    <section class="categoria" id="retro">
+        <h2 class="toggle-titulo">Diseños Retro</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
 
-    <section class="categoria" id="frases">
-        <h2>Diseños Urbano</h2>
+    <section class="categoria" id="urbano">
+        <h2 class="toggle-titulo">Diseños Urbano</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
       </section>
 
-    <section class="categoria" id="frases">
-        <h2>Diseños Antisocial</h2>
+    <section class="categoria" id="antisocial">
+        <h2 class="toggle-titulo">Diseños Antisocial</h2>
         <div class="galeria">
           <!-- Aquí agregas tus mockups de frases -->
         </div>
-      </section>
-    
+      </section>/header>
+
+    <!-- Repite la estructura anterior para el resto -->
+    <!-- Solo asegúrate de tener <h2 class="toggle-titulo"> y la galería debajo -->
+
+    <!-- Puedes seguir agregando más secciones aquí -->
+
   </main>
 
   <footer>
@@ -283,29 +292,36 @@
   </div>
 
   <script>
-    const images = document.querySelectorAll('.galeria img'); // Selecciona todas las imágenes
+    // Lightbox
+    const images = document.querySelectorAll('.galeria img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const close = document.getElementById('close');
 
-    // Al hacer clic en una imagen, mostrarla en el lightbox
     images.forEach(image => {
-      image.addEventListener('click', function() {
-        lightbox.style.display = 'flex'; // Muestra el lightbox
-        lightboxImg.src = this.src; // Establece la imagen grande
+      image.addEventListener('click', function () {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = this.src;
       });
     });
 
-    // Cerrar el lightbox cuando se hace clic en el botón de cerrar
-    close.addEventListener('click', function() {
-      lightbox.style.display = 'none'; // Ocultar el lightbox
+    close.addEventListener('click', function () {
+      lightbox.style.display = 'none';
     });
 
-    // Cerrar el lightbox si se hace clic fuera de la imagen
-    lightbox.addEventListener('click', function(e) {
+    lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) {
-        lightbox.style.display = 'none'; // Ocultar el lightbox si se hace clic fuera de la imagen
+        lightbox.style.display = 'none';
       }
+    });
+
+    // Toggle desplegable
+    const titulos = document.querySelectorAll('.toggle-titulo');
+    titulos.forEach(titulo => {
+      const galeria = titulo.nextElementSibling;
+      titulo.addEventListener('click', () => {
+        galeria.classList.toggle('oculto');
+      });
     });
   </script>
 </body>
